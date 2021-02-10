@@ -1,7 +1,7 @@
 # Create Neo4j Configuration File
 
 
-This code create a configuration file for neo4j with provided parameters in parameters.txt. 
+This code creates configuration file needed for neo4j with provided parameters in parameters.txt. 
 
 ## Files and description
 
