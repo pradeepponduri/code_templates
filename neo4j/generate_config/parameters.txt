@@ -1,0 +1,15 @@
+data_path="/data/"
+
+plugins_path="/data/plugins"
+
+logs_path="/data/logs"
+
+trasanctions_path="/data/trasanctions"
+
+import_path="/data/import"
+
+listen_address="127.0.0.1"
+
+retention_policy="1 files"
+
+retention_size="56M"
