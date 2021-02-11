@@ -1,1 +1,5 @@
 ./DS_Store
+
+
+/docker/python-docket-setup/__pycache__
+/docker/python-docket-setup/.cache

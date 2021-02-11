@@ -1,0 +1,6 @@
+name: dev
+dependencies:
+  - pytest
+  - numpy
+  - pandas
+  - python-neo4j-driver
