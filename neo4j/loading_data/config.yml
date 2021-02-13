@@ -1,0 +1,28 @@
+#server_uri: bolt://127.0.0.1:7687/
+admin_user: "neo4j"
+admin_pass: "neo4j123"
+base_folder: /home/ubuntu/
+
+file_delimiter : ','
+indexes:
+  - CREATE CONSTRAINT ON (p:Account)
+       ASSERT p.account_id IS UNIQUE;
+
+  - CREATE CONSTRAINT ON (p:Order)
+       ASSERT p.order_id IS UNIQUE;
+
+  
+
+steps:
+  step1 :
+      process: True
+      csv_dependent : True
+      filename : Accounts
+      multi_process : False
+      file_type : csv
+      cql : |
+          with $dict.rows as rows UNWIND rows as line
+          MERGE (a:Account{account_id:line.account_id}) set a.total_weekly_capacity=toInteger(line.total_weekly_capacity);
+          
+
+chunk_size: 55000
